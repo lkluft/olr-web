@@ -18,7 +18,7 @@ var trace = {
   mode: "lines",
   x : await getDataVar("frequency"),
   y : await getDataVar("outgoing_longwave_radiation"),
-  line: {color: '#FF5722', width: 1},
+  line: {color: '#E6722E', width: 1},
 };
 
 Plotly.plot(document.getElementById('spectrum'), [trace], layout);
