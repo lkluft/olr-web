@@ -1,5 +1,12 @@
 import { getDataVar } from "./zarr_data.js";
 
+let xdata = await getDataVar("kayser")
+let ydata = await getDataVar("outgoing_longwave_radiation")
+
+function get_label(data) {
+    return data.shortname.concat(" / ", data.units);
+};
+
 let style = window.getComputedStyle(document.getElementById('spectrum'));
 var layout = {
     font: {
@@ -9,15 +16,15 @@ var layout = {
     },
     paper_bgcolor: style.getPropertyValue('background-color'),
     plot_bgcolor: style.getPropertyValue('background-color'),
-    xaxis: {title: "Frequency / Hz"},
-    yaxis: {title: "OLR / Wm<sup>−2</sup>cm"},
+    xaxis: {title: get_label(xdata)},
+    yaxis: {title: get_label(ydata)},
 };
 
 var trace = {
   type: "scatter",
   mode: "lines",
-  x : await getDataVar("frequency"),
-  y : await getDataVar("outgoing_longwave_radiation"),
+  x : xdata.data,
+  y : ydata.data,
   line: {color: '#E6722E', width: 1},
 };
 

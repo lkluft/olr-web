@@ -10,5 +10,9 @@ export async function getDataVar(varname) {
     let datavar = await openGroup(datastore, datasource.dataset, "r").then(ds => ds.getItem(varname));
     let data = await datavar.getRaw();
 
-    return data.data
+    return {
+        'data': data.data,
+        'units': await datavar.attrs.getItem("units"),
+        'shortname': await datavar.attrs.getItem("shortname"),
+    }
 };
