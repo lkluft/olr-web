@@ -13,6 +13,6 @@ body {
   bottom: 50%;
   transform: translate(50%, 50%);
   position: absolute;
-  width: 90%;
   height: 90%;
+  aspect-ratio: 1.618;
 }
