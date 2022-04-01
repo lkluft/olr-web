@@ -21,4 +21,9 @@ var trace = {
   line: {color: '#E6722E', width: 1},
 };
 
-Plotly.plot(document.getElementById('spectrum'), [trace], layout);
+var config = {
+    responsive: true,
+    displayModeBar: false,
+}
+
+Plotly.plot('spectrum', [trace], layout, config);
