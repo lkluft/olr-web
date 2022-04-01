@@ -30,7 +30,20 @@ var trace = {
 
 var config = {
     responsive: true,
-    displayModeBar: false,
+    modeBarButtonsToRemove: [
+        'zoomIn2d',
+        'zoomOut2d',
+        "autoScale2d",
+        "toggleSpikelines",
+        'hoverClosestCartesian',
+        'hoverCompareCartesian',
+    ],
+    toImageButtonOptions: {
+        format: 'png',
+        height: 700,
+        width: 1200,
+        scale: 1,
+  },
 }
 
 Plotly.plot('spectrum', [trace], layout, config);
