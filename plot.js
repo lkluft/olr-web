@@ -25,7 +25,7 @@ var trace = {
   mode: "lines",
   x : xdata.data,
   y : ydata.data,
-  line: {color: '#E6722E', width: 1},
+  line: {color: '#888CFF', width: 1},
 };
 
 var config = {
