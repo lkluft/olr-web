@@ -31,8 +31,6 @@ var trace = {
 var config = {
     responsive: true,
     modeBarButtonsToRemove: [
-        'zoomIn2d',
-        'zoomOut2d',
         "autoScale2d",
         "toggleSpikelines",
         'hoverClosestCartesian',
