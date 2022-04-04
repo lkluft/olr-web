@@ -18,6 +18,11 @@ var layout = {
     plot_bgcolor: style.getPropertyValue('background-color'),
     xaxis: {title: get_label(xdata)},
     yaxis: {title: get_label(ydata), type: 'log'},
+    margin: {
+        r: 0,
+        t: 0,
+        pad: 0,
+      },
     showlegend: false,
 };
 
